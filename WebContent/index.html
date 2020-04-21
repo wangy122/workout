@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WorkOut Creator</title>
+</head>
+<body>
+
+<form method="get" action="setup">
+<h1>TEST</h1>
+
+<label for="group">Choose a group:</label>
+<select id="group" name="group">
+  <option value="GROUP1">Group 1</option>
+  <option value="GROUP2">Group 2</option>
+  <option value="GROUP3">Group 3</option>
+  <option value="GROUP4">Group 4</option>
+</select>
+</br>
+
+Name:<input type="text" name="name">
+Name:<input type="text" name="name2">
+Name:<input type="text" name="name3">
+</br>
+
+<p><input type="checkbox" id= "set1" name="set1" value="set1" onclick="removeset1()">
+<label for="set1">Set 1</label></p>
+
+<p><input type="checkbox" id= "run1" name="sport1" value="run" disabled>
+<label for="run1">run</label>
+<input type="checkbox" id= "jog1" name="sport1" value="jog" disabled>
+<label for="jog1">jog</label>
+
+
+<p><input type="checkbox" id= "set2" name="set2" value="set2" disabled onclick="removeset2()">
+<label for="set2">Set 2</label>
+
+<p><input type="checkbox" id= "run2" name="sport2" value="run" disabled>
+<label for="run2">run</label>
+<input type="checkbox" id= "jog2" name="sport2" value="jog" disabled>
+<label for="jog2">jog</label>
+</p>
+
+<center><input type="submit" value="submit"></center>
+</form>
+<script>
+function removeset1(){
+		document.getElementById("run1").disabled = false;
+		document.getElementById("jog1").disabled = false;
+		document.getElementById("set2").disabled = false;
+
+}
+function removeset2(){
+	document.getElementById("run2").disabled = false;
+	document.getElementById("jog2").disabled = false;
+
+}
+</script>
+</body>
+</html>
